@@ -1,5 +1,5 @@
 function Game() {
-    tabuleiro = []
+    tabuleiro = [[0, 0, 0], [0, 0, 0], [0, 0 ,0]]
 }
 
 function criaJogador(nome, marcador) {
