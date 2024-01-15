@@ -3,5 +3,8 @@ function Game() {
 }
 
 function criaJogador(nome, marcador) {
-
+    return {nome, marcador}
 }
+
+const jogador1 = criaJogador('Felipe Rangel', 'X')
+const jogador2 = criaJogador('Maria Eduarda', 'O')
