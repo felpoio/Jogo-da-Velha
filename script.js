@@ -1,5 +1,7 @@
-function Game() {
-    tabuleiro = [[0, 0, 0], [0, 0, 0], [0, 0 ,0]]
+let jogadorDaVez // criar função pra selecionar qual o jogador da vez
+
+const jogo = {
+    tabuleiro: [[0, 0, 0], [0, 0, 0], [0, 0 ,0]]
 }
 
 function criaJogador(nome, marcador) {
@@ -11,7 +13,7 @@ const jogador1 = criaJogador('Felipe Rangel', 'X')
 const jogador2 = criaJogador('Maria Eduarda', 'O')
 
 function selecionaQuadrado(id, jogador){
-
+    
 }
 
 function criaQuadrado() {
