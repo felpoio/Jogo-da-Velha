@@ -1,5 +1,5 @@
-function criaJogador(nome, marcador, id) {
-    return {nome, marcador, id}
+function criaJogador(nome, marcador, num) {
+    return {nome, marcador, num}
 }
 
 // **Tirar esse código do global**
@@ -15,6 +15,7 @@ const jogo = {
 function selecionaQuadrado(id, jogador){
     let quadrado = document.querySelector(`#${id}`)
     quadrado.innerHTML = jogador.marcador
+    jogo.tabuleiro[id[3]][id[4]] = jogador.num
     trocaJogador(jogador)
 }
 
