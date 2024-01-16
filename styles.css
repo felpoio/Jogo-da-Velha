@@ -1,0 +1,13 @@
+#container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#container div {
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+}
