@@ -13,15 +13,16 @@ const jogador1 = criaJogador('Felipe Rangel', 'X')
 const jogador2 = criaJogador('Maria Eduarda', 'O')
 
 function selecionaQuadrado(id, jogador){
-    
+
 }
 
+// Função que cria os quadrados para marcar e adiciona a função que recebe o clique em cada um
 function criaQuadrado() {
     let container = document.querySelector('#container')
     for (let i = 1; i < 10; i++) {
         let quadrado = document.createElement('div')
         quadrado.id = i
-        quadrado.addEventListener('click', () => selecionaQuadrado(this.id, jogadorDaVez))
+        quadrado.addEventListener('click', () => selecionaQuadrado(quadrado.id, jogadorDaVez))
         container.appendChild(quadrado)
     }
 }
