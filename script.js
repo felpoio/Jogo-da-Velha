@@ -1,10 +1,10 @@
-function criaJogador(nome, marcador) {
-    return {nome, marcador}
+function criaJogador(nome, marcador, id) {
+    return {nome, marcador, id}
 }
 
 // **Tirar esse código do global**
-const jogador1 = criaJogador('Felipe Rangel', 'X')
-const jogador2 = criaJogador('Maria Eduarda', 'O')
+const jogador1 = criaJogador('Felipe Rangel', 'X', 1)
+const jogador2 = criaJogador('Maria Eduarda', 'O', 2)
 
 let jogadorDaVez = jogador1// criar função pra selecionar qual o jogador da vez
 
@@ -29,11 +29,13 @@ function trocaJogador(jogador){
 // Função que cria os quadrados para marcar e adiciona a função que recebe o clique em cada um
 function criaQuadrado() {
     let container = document.querySelector('#container')
-    for (let i = 1; i < 10; i++) {
-        let quadrado = document.createElement('div')
-        quadrado.id = `num${i}`
-        quadrado.addEventListener('click', () => selecionaQuadrado(quadrado.id, jogadorDaVez))
-        container.appendChild(quadrado)
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            let quadrado = document.createElement('div')
+            quadrado.id = `num${i.toString() + j.toString()}`
+            quadrado.addEventListener('click', () => selecionaQuadrado(quadrado.id, jogadorDaVez))
+            container.appendChild(quadrado)    
+        }
     }
 }
 
