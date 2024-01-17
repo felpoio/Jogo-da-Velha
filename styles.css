@@ -1,16 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+}
+
 #container {
     display: grid;
-    height: 100vh;
+    height: 80vh;
+    width: 40vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px;
+    padding: 1rem 20rem;
+    justify-items: center;
+    align-items: center;
 }
 
 #container div {
-    background-color: grey;
+    background-color: #EEEEEE;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
+    font-size: 7rem;
 }
