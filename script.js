@@ -14,10 +14,12 @@ const jogo = {
 
 function selecionaQuadrado(id, jogador){
     let quadrado = document.querySelector(`#${id}`)
-    quadrado.innerHTML = jogador.marcador
-    jogo.tabuleiro[id[3]][id[4]] = jogador.num
-    checaVencedor(jogo.tabuleiro, jogador)
-    trocaJogador(jogador)
+    if (quadrado.innerHTML === ''){
+        quadrado.innerHTML = jogador.marcador
+        jogo.tabuleiro[id[3]][id[4]] = jogador.num
+        checaVencedor(jogo.tabuleiro, jogador)
+        trocaJogador(jogador)
+    }
 }
 
 function trocaJogador(jogador){
