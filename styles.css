@@ -15,8 +15,8 @@ h1 {
 
 #container {
     display: grid;
-    height: 80vh;
-    width: 40vw;
+    height: 70vh;
+    width: 35vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
@@ -33,6 +33,11 @@ h1 {
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    font-size: 7rem;
+    font-size: 6.5rem;
     cursor: pointer;
+}
+
+#jogadorDaVez {
+    font-size: 1.7rem;
+    font-weight: 600;
 }
