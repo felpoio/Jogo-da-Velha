@@ -33,38 +33,49 @@ function trocaJogador(jogador){
 function checaVencedor(tabuleiro, jogador){
     let modalGanhador = document.querySelector('#fimDeJogo')
     let p = document.createElement('p')
+    let button = document.createElement('button')
+    button.innerHTML = 'Reset'
 
     if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[0][1] && tabuleiro[0][0] === tabuleiro[0][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
+        
     } else if (tabuleiro[1][0] !== 0 && tabuleiro[1][0] === tabuleiro[1][1] && tabuleiro[1][0] === tabuleiro[1][2]) {
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[2][0] !== 0 && tabuleiro[2][0] === tabuleiro[2][1] && tabuleiro[2][0] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][0] && tabuleiro[0][0] === tabuleiro[2][0]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[0][1] !== 0 && tabuleiro[0][1] === tabuleiro[1][1] && tabuleiro[0][1] === tabuleiro[2][1]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][2] && tabuleiro[0][2] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[0][0] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     } else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[0][2] === tabuleiro[2][0]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
+        modalGanhador.appendChild(button)
         modalGanhador.showModal()
     }
 }
