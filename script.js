@@ -8,6 +8,9 @@ const jogador2 = criaJogador('Maria Eduarda', 'O', 2)
 
 let jogadorDaVez = jogador1// criar função pra selecionar qual o jogador da vez
 
+let exibeJogador = document.querySelector('#jogadorDaVez')
+exibeJogador.innerHTML = `Vez de ${jogador1.nome}`
+
 const jogo = {
     tabuleiro: [[0, 0, 0], [0, 0, 0], [0, 0 ,0]]
 }
@@ -25,8 +28,10 @@ function selecionaQuadrado(id, jogador){
 function trocaJogador(jogador){
     if (jogador === jogador1) {
         jogadorDaVez = jogador2
+        exibeJogador.innerHTML = `Vez de ${jogadorDaVez.nome}`
     } else {
         jogadorDaVez = jogador1
+        exibeJogador.innerHTML = `Vez de ${jogadorDaVez.nome}`
     }
 }
 
@@ -41,38 +46,44 @@ function checaVencedor(tabuleiro, jogador){
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-        
-    } else if (tabuleiro[1][0] !== 0 && tabuleiro[1][0] === tabuleiro[1][1] && tabuleiro[1][0] === tabuleiro[1][2]) {
+    } 
+    else if (tabuleiro[1][0] !== 0 && tabuleiro[1][0] === tabuleiro[1][1] && tabuleiro[1][0] === tabuleiro[1][2]) {
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[2][0] !== 0 && tabuleiro[2][0] === tabuleiro[2][1] && tabuleiro[2][0] === tabuleiro[2][2]){
+    } 
+    else if (tabuleiro[2][0] !== 0 && tabuleiro[2][0] === tabuleiro[2][1] && tabuleiro[2][0] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][0] && tabuleiro[0][0] === tabuleiro[2][0]){
+    } 
+    else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][0] && tabuleiro[0][0] === tabuleiro[2][0]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[0][1] !== 0 && tabuleiro[0][1] === tabuleiro[1][1] && tabuleiro[0][1] === tabuleiro[2][1]){
+    } 
+    else if (tabuleiro[0][1] !== 0 && tabuleiro[0][1] === tabuleiro[1][1] && tabuleiro[0][1] === tabuleiro[2][1]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][2] && tabuleiro[0][2] === tabuleiro[2][2]){
+    } 
+    else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][2] && tabuleiro[0][2] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[0][0] === tabuleiro[2][2]){
+    } 
+    else if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[1][1] && tabuleiro[0][0] === tabuleiro[2][2]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
         modalGanhador.showModal()
-    } else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[0][2] === tabuleiro[2][0]){
+    } 
+    else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[0][2] === tabuleiro[2][0]){
         p.innerHTML = `${jogador.nome} ganhou!`
         modalGanhador.appendChild(p)
         modalGanhador.appendChild(button)
