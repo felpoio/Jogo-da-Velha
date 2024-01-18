@@ -2,9 +2,15 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Nunito", sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0.5rem;
 }
 
 #container {
@@ -28,4 +34,5 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 7rem;
+    cursor: pointer;
 }
