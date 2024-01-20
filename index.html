@@ -12,9 +12,23 @@
     </div>
     <p id="jogadorDaVez"></p>
     <dialog id="inicioDeJogo">
-        <form action="dialog">
-            <label for="nome">Insira seu nome</label>
-            <input type="text" name="nome_jogador" id="nome">
+        <form>
+            <div>
+                <label for="nome-jogador1">Insira o nome do jogador 1</label>
+                <input type="text" name="nome1" id="nome-jogador1">
+            </div>
+            <div>
+                <label for="nome-jogador2">Insira o nome do jogador 2</label>
+                <input type="text" name="nome2" id="nome-jogador2">
+            </div>
+            <div>
+                <p>Jogador 1, Selecione seu marcador</p>
+                <input type="radio" name="marcador" id="X">
+                <label for="X">X</label>
+                <input type="radio" name="marcador" id="O">
+                <label for="O">O</label>
+            </div>
+            <button type="submit">Começar!</button>
         </form>
     </dialog>
     <dialog id="fimDeJogo">
