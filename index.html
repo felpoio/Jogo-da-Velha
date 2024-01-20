@@ -12,23 +12,23 @@
     </div>
     <p id="jogadorDaVez"></p>
     <dialog id="inicioDeJogo">
-        <form>
+        <form method="dialog">
             <div>
                 <label for="nome-jogador1">Insira o nome do jogador 1</label>
-                <input type="text" name="nome1" id="nome-jogador1" placeholder="Jogador 1" required>
+                <input type="text" name="nome1" id="nome-jogador1" maxlength="100" placeholder="Jogador 1" required>
             </div>
             <div>
                 <label for="nome-jogador2">Insira o nome do jogador 2</label>
-                <input type="text" name="nome2" id="nome-jogador2" placeholder="Jogador 2" required>
+                <input type="text" name="nome2" id="nome-jogador2" maxlength="100" placeholder="Jogador 2" required>
             </div>
-            <div id="marcador">
+            <div id="input-marcador">
                 <p>Jogador 1, Selecione seu marcador</p>
-                <input type="radio" name="marcador" id="X" required>
+                <input type="radio" name="marcador" id="X" value="X" required>
                 <label for="X">X</label>
-                <input type="radio" name="marcador" id="O" required>
+                <input type="radio" name="marcador" id="O" value="O" required>
                 <label for="O">O</label>
             </div>
-            <button id="game-start" type="submit">Começar!</button>
+            <button id="game-start">Começar!</button>
         </form>
     </dialog>
     <dialog id="fimDeJogo">
