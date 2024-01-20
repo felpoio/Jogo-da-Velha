@@ -118,10 +118,10 @@ function criaJogador(nome, marcador, num) {
 }
 
 // **Tirar esse código do global**
-const jogador1 = criaJogador('Felipe Rangel', 'X', 1)
-const jogador2 = criaJogador('Maria Eduarda', 'O', 2)
+//const jogador1 = criaJogador('Felipe Rangel', 'X', 1)
+//const jogador2 = criaJogador('Maria Eduarda', 'O', 2)
 
 let inicio = document.querySelector('#inicioDeJogo')
-//inicio.showModal()
+inicio.showModal()
 
 Game()
