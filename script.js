@@ -1,4 +1,4 @@
-function Game() {
+function Game(jogador1, jogador2) {
     let container = document.querySelector('#container')
     let jogadorDaVez = jogador1
     let exibeJogador = document.querySelector('#jogadorDaVez')
@@ -47,8 +47,9 @@ function Game() {
         let p = document.createElement('p')
         let button = document.createElement('button')
         button.addEventListener('click', () => {
-            Game()
+            Game(jogador1, jogador2)
             modalGanhador.close()
+            modalGanhador.innerHTML = ''
         })
         button.innerHTML = 'Novo Jogo'
 
@@ -113,15 +114,33 @@ function Game() {
     criaQuadrado()
 }
 
-function criaJogador(nome, marcador, num) {
-    return {nome, marcador, num}
+function startGame() {
+    function criaJogador(nome, marcador, num) {
+        return {nome, marcador, num}
+    }
+
+    let inicio = document.querySelector('#inicioDeJogo')
+    inicio.showModal()
+
+    let startButton = document.querySelector('#game-start')
+
+    startButton.addEventListener('click', () => {
+        let jogador1_nome = document.querySelector('#nome-jogador1').value
+        let jogador2_nome = document.querySelector('#nome-jogador2').value
+        let jogador1_marcador = document.querySelector('input[name="marcador"]:checked').value
+        let jogador2_marcador
+        if (jogador1_marcador === 'X'){
+            jogador2_marcador = 'O'
+        } else {
+            jogador2_marcador = 'X'
+        }
+    
+        const jogador1 = criaJogador(jogador1_nome, jogador1_marcador, 1)
+        const jogador2 = criaJogador(jogador2_nome, jogador2_marcador, 2)
+
+        inicio.close()
+        Game(jogador1, jogador2)
+    })  
 }
 
-// **Tirar esse código do global**
-//const jogador1 = criaJogador('Felipe Rangel', 'X', 1)
-//const jogador2 = criaJogador('Maria Eduarda', 'O', 2)
-
-let inicio = document.querySelector('#inicioDeJogo')
-inicio.showModal()
-
-Game()
+startGame()
