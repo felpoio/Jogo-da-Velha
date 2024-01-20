@@ -1,10 +1,12 @@
 function Game() {
+    let container = document.querySelector('#container')
     let jogadorDaVez = jogador1
     let exibeJogador = document.querySelector('#jogadorDaVez')
     const jogo = {
         tabuleiro: [[0, 0, 0], [0, 0, 0], [0, 0 ,0]]
     }
-    
+
+    container.innerHTML = ''
     exibeJogador.innerHTML = `Vez de ${jogador1.nome}`
 
     // Função que cria os quadrados para marcar e adiciona a função que recebe o clique em cada um
@@ -44,7 +46,11 @@ function Game() {
         let modalGanhador = document.querySelector('#fimDeJogo')
         let p = document.createElement('p')
         let button = document.createElement('button')
-        button.innerHTML = 'Reset'
+        button.addEventListener('click', () => {
+            Game()
+            modalGanhador.close()
+        })
+        button.innerHTML = 'Novo Jogo'
     
         if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[0][1] && tabuleiro[0][0] === tabuleiro[0][2]){
             p.innerHTML = `${jogador.nome} ganhou!`
