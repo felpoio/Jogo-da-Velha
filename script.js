@@ -51,6 +51,8 @@ function Game() {
             modalGanhador.close()
         })
         button.innerHTML = 'Novo Jogo'
+
+        console.log(tabuleiro[0].includes(0))
     
         if (tabuleiro[0][0] !== 0 && tabuleiro[0][0] === tabuleiro[0][1] && tabuleiro[0][0] === tabuleiro[0][2]){
             p.innerHTML = `${jogador.nome} ganhou!`
@@ -96,6 +98,12 @@ function Game() {
         } 
         else if (tabuleiro[0][2] !== 0 && tabuleiro[0][2] === tabuleiro[1][1] && tabuleiro[0][2] === tabuleiro[2][0]){
             p.innerHTML = `${jogador.nome} ganhou!`
+            modalGanhador.appendChild(p)
+            modalGanhador.appendChild(button)
+            modalGanhador.showModal()
+        }
+        else if (tabuleiro[0].includes(0) === false && tabuleiro[1].includes(0) === false && tabuleiro[2].includes(0) === false){
+            p.innerHTML = 'Deu Velha!'
             modalGanhador.appendChild(p)
             modalGanhador.appendChild(button)
             modalGanhador.showModal()
